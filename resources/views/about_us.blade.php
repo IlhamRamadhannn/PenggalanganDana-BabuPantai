@@ -1,66 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>about us</title>
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <style >
-        div{
-            /* border: 1px solid rgb(0, 0, 0); */
-            
-        }
-        p{
-            
-        }
-        *{
-            
-        }
+@extends ('layout.master')
 
-        body {
-        background-image: url('/images/backgr_00000.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .navbar-nav .nav-link {
-            color: white; /* Set link text color to white */
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #007bff; /* Change link color on hover to blue */
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container-fluid"  style=" position: fixed; top: 0;">
-        <div class= "row">
-            <div id="logo" class="col-8 p-4">
-                <img src="{{url('/images/logo3_00000.png')}}" alt="" style="height: 90px; width: 265px;">
-            </div>
-            <div class="col-4 d-flex justify-content-center align-items-center">
-                <nav class="navbar navbar-expand-xxl">
-                    <ul class="navbar-nav" style="color:white;">
-                        <li class="nav-item p-3">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item p-3">
-                            <a class="nav-link" href="#">Donate</a>
-                        </li>
-                        <li class="nav-item p-3">
-                            <a class="nav-link" href="#">My Donate</a>
-                        </li>
-                        <li class="nav-item p-3">
-                            <a class="nav-link" href="#">Profile</a>
-                        </li>
-            </ul>
-            </nav>
-        </div>
-    </div>
-            
-        </div>
+@section('content')
          <br><br><br><br>
          <br><br><br><br>
         <div class="row"  style="height: 50px ; text-align: left">
@@ -105,6 +45,4 @@ Nam ut ac diam euismod faucibus ultricies maecenas penatibus suspendisse. Tristi
     </div>
    
 
-
-</body>
-</html>
+    @endsection
