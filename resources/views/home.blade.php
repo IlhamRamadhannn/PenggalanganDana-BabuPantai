@@ -25,6 +25,9 @@
     </div>
             
         </div>
+@extends ('layout.master')
+
+@section('content')
          <br><br><br><br>
          <br><br><br><br>
         <div class="row"  style="height: 50px ; text-align: left">
@@ -65,3 +68,4 @@ Nam ut ac diam euismod faucibus ultricies maecenas penatibus suspendisse. Tristi
     </div>
    
 
+    @endsection
