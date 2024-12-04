@@ -6,6 +6,21 @@
     <title>Document</title>
     @include('custom.bootstrap5')
 </head>
+<style >
+        p{
+            
+        }
+        *{
+            
+        }
+
+        body {
+        background-image: url('/images/backgr_00000.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
 <body>
     @include ('layout.header')
 
