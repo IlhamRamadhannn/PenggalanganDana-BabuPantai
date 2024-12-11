@@ -4,11 +4,11 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Donation;
+use App\Models\Donations;
 use App\Models\Users;
 use Faker\Factory as Faker;
 
-class DonationSeeder extends Seeder
+class DonationsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -24,7 +24,7 @@ class DonationSeeder extends Seeder
         foreach ($users as $user) {
             // Setiap user melakukan 1-3 donasi
             foreach (range(1, rand(1, 3)) as $index) {
-                Donation::create([
+                Donations::create([
                     'user_id' => $user->id,
                     'amount' => $faker->randomFloat(2, 50000, 500000), // Donasi antara 50rb - 500rb
                     'payment_method' => $faker->randomElement(['Bank Transfer', 'Credit Card', 'E-Wallet']),

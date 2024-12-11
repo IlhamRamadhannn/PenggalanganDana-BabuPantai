@@ -12,6 +12,6 @@ class Users extends Model
     protected $guarded = [];
 
     public function donations(){
-        return $this->hasMany(Donation::class);
+        return $this->hasMany(Donations::class);
     }
 }

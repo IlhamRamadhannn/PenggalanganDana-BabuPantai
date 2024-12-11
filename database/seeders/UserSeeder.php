@@ -17,12 +17,14 @@ class UserSeeder extends Seeder
     {
         //
         $faker = Faker::create();
-
+        $gender = ['Laki-laki', 'Perempuan'];
         foreach (range(1, 10) as $index) { // Membuat 10 user dummy
             Users::create([
                 'name' => $faker->name,
+                'gender'=> $faker->randomElement($gender),
                 'email' => $faker->unique()->safeEmail,
                 'phone_number' => $faker->phoneNumber,
+                'points' => $faker->randomNumber(3),
                 'password' => Hash::make('password'), // Password default
                 'total_donation' => $faker->randomFloat(2, 100000, 1000000), // Donasi total acak antara 100rb - 1jt
                 'created_at' => now(),

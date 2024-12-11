@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('gender');
             $table->string('email')->unique();
             $table->string('phone_number')->nullable();
             $table->string('password');
+            $table->integer('points')->default(0);
             $table->decimal('total_donation', 15, 2)->default(0.00);
             $table->timestamps();
         });
