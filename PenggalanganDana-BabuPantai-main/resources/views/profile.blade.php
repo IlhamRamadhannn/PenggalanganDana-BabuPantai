@@ -22,12 +22,12 @@
                         <span class="fw-bold">Laki-laki</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
-                        <span class="fw-bold">Tanggal Lahir:</span>
-                        <span class="fw-bold">15 Agustus 1990</span>
+                        <span class="fw-bold">Nomor Telepon:</span>
+                        <span class="fw-bold">088273662872</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
-                        <span class="fw-bold">Umur:</span>
-                        <span class="fw-bold">34 Tahun</span>
+                        <span class="fw-bold">Email:</span>
+                        <span class="fw-bold">DoeJohn77@gmail.com</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
                         <span class="fw-bold">Jumlah Donasi:</span>

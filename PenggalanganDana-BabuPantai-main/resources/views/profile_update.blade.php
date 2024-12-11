@@ -23,12 +23,12 @@
                         <input type="text" class="form-control" id="gender" value="Laki-laki" readonly>
                     </div>
                     <div class="mb-3">
-                        <label for="birthdate" class="form-label text-white">Tanggal Lahir</label>
-                        <input type="text" class="form-control" id="birthdate" value="15 Agustus 1990" readonly>
+                        <label for="No" class="form-label text-white">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="No" value="087736473838" readonly>
                     </div>
                     <div class="mb-3">
-                        <label for="age" class="form-label text-white">Umur</label>
-                        <input type="text" class="form-control" id="age" value="34 Tahun" readonly>
+                        <label for="email" class="form-label text-white">Email</label>
+                        <input type="text" class="form-control" id="email" value="Jikustik1508@gmail.com" readonly>
                     </div>
                     <div class="mb-3">
                         <label for="donation" class="form-label text-white">Jumlah Donasi</label>
