@@ -15,7 +15,7 @@
         }
 
         body {
-        background-image: url('/images/backgr_00000.png');
+        background-image: url('/images/seaextend.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
