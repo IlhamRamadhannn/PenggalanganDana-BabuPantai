@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function(){
     return view('home');
 });
+Route::get('/about', function(){
+    return view('about');
+});
+Route::get('/donate', function(){
+    return view('donate');
+});
 Route::get('/profile', function(){
     return view('profile');
 });
