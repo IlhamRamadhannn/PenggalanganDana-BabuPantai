@@ -18,4 +18,4 @@ Route::get('/profile_update', function(){
     return view('profile_update');
 });
 
-Route::get('/transaction', [Controllers\TransactionController::class, 'index']);
+Route::get('/transaksi', [Controllers\TransactionController::class, 'index']);
