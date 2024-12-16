@@ -2,5 +2,5 @@
 @section('content')
 
 
-this is about us 
+this is articles page 
 @endsection

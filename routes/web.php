@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\ProfileController;
 
 // Route::get('/', function () {
 //     echo "123";
@@ -22,7 +21,4 @@ Route::get('/profile', function(){
 });
 Route::get('/profile_update', function(){
     return view('profile_update');
-});
-Route::get('/transaksi', function(){
-    return view('transaksi');
 });
