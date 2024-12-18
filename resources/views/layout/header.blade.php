@@ -8,9 +8,13 @@
                         <a class="nav-link" style="font-weight: bold;" href="{{route('homepage')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight: bold;" href="/about">About Us</a>
+                    <a class="nav-link" style="font-weight: bold;" href="{{ route('homepage') }}#about-us">About Us</a>
+
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-weight: bold;" href="/articles">Articles</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" style="font-weight: bold;" href="#" role="button" data-bs-toggle="dropdown" >
                             Articles
                         </a>
@@ -18,7 +22,7 @@
                             <li><a class="dropdown-item" style="font-weight: bold;" href="#">Services Insite</a></li>
                             <li><a class="dropdown-item" style="font-weight: bold;" href="#">Services Mine</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" style="font-weight: bold;" href="/donate">Donate</a>
                     </li>
