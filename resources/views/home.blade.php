@@ -1,7 +1,7 @@
-@extends('layout.master')
+@extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-top: 15%">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -15,7 +15,10 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    
                 </div>
+                {{-- <a href="{{route('homepage')}}" class="btn btn-primary">Go to Home</a> --}}
             </div>
         </div>
     </div>

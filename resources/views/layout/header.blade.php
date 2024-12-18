@@ -23,9 +23,18 @@
                         <a class="nav-link" style="font-weight: bold;" href="/donate">Donate</a>
                     </li>
                     
+                    @guest
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-weight: bold;" href="{{route('login')}}">Login</a>
+                    </li>    
+
+                    @else
                     <li class="nav-item">
                         <a class="nav-link" style="font-weight: bold;" href="/profile">Profile</a>
                     </li>
+                    @endguest
+
+                    
                 </ul>
             </div>
         </div>

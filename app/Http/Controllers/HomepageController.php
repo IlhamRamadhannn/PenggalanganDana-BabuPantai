@@ -10,8 +10,8 @@ class HomepageController extends Controller
     //
 
     public function index(){
-        $sumdonate = DB::table('user')->sum('total_donation');
+        // $sumdonate = DB::table('users')->sum('total_donation'); , compact('sumdonate')
         // dd($sumdonate);
-        return view('homepage', compact('sumdonate'));
+        return view('homepage');
     }
 }

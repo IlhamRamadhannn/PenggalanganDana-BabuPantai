@@ -40,6 +40,21 @@
                 <div class="text-center">
                     <a href="{{route('profile.create')}}" class="btn btn-success btn-lg rounded-pill py-3 px-5">Edit Profile</a>
                 </div>
+                {{-- <div class="text-center">
+                    <a href="{{route('logout')}}" class="btn btn-success btn-lg rounded-pill py-3 px-5" style="margin-top: 10px">logout</a>
+                </div> --}}
+
+                <div class="text-center" style="margin-top: 20px;">
+                    <a class="btn btn-success btn-lg rounded-pill py-3 px-5" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
             </div>
         </div>
     </div>

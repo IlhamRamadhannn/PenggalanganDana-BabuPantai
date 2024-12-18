@@ -40,6 +40,7 @@
                     <div class="text-center">
                         <button type="submit" class="btn btn-success btn-lg rounded-pill py-3 px-5">Update Profile</button>
                     </div>
+                    
                 </form>
             </div>
         </div>

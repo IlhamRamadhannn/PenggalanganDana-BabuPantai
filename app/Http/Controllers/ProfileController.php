@@ -16,7 +16,7 @@ class ProfileController extends Controller
     public function index()
     {
         //
-        $user = DB::table('user')->where('id', '1')->get();
+        $user = DB::table('users')->where('id', '1')->get();
 
         // dd($user);
         return view('profile', compact('user'));
