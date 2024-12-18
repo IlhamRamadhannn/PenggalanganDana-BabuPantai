@@ -5,7 +5,7 @@
             <div class="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight: bold;" href="/">Home</a>
+                        <a class="nav-link" style="font-weight: bold;" href="{{route('homepage')}}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="font-weight: bold;" href="/about">About Us</a>

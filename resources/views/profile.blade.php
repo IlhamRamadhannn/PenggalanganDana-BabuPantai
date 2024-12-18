@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="/profile_update" class="btn btn-success btn-lg rounded-pill py-3 px-5">Edit Profile</a>
+                    <a href="{{route('profile.create')}}" class="btn btn-success btn-lg rounded-pill py-3 px-5">Edit Profile</a>
                 </div>
             </div>
         </div>

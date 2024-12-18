@@ -12,4 +12,8 @@ class Articles extends Model
 
     protected $table = 'articles';
     protected $guard = [];
+
+    public function comments(){
+        $this->hasMany(Comments::class);
+    }
 }

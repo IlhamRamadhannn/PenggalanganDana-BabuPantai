@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Donations;
-use App\Models\Users;
+use App\Models\User;
 use Faker\Factory as Faker;
 
 class DonationsSeeder extends Seeder
@@ -19,7 +19,7 @@ class DonationsSeeder extends Seeder
     {
         //
         $faker = Faker::create();
-        $users = Users::all(); // Mengambil semua user
+        $users = User::all(); // Mengambil semua user
 
         foreach ($users as $user) {
             // Setiap user melakukan 1-3 donasi

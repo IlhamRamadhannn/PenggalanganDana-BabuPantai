@@ -8,12 +8,12 @@
                 Edit Profile
             </h5>
             <div class="card bg-dark text-white" style="border-radius: 10px; padding: 30px;">
-                <div class="text-center mb-4">
+                {{-- <div class="text-center mb-4">
                     <img src="{{ asset('images/Blue eyes.jpg') }}" alt="Profile Picture" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid white;">
                     <h5 class="text-white mt-3" style="cursor: pointer;">Change Picture</h5>
-                </div>
+                </div> --}}
 
-                <form>
+                <form method="post" action="{{route('profile.update')}}">
                     <div class="mb-3">
                         <label for="username" class="form-label">Nama Donatur</label>
                         <input type="text" class="form-control" id="username" placeholder="Masukkan nama Anda" value="Jikustik">
@@ -38,7 +38,7 @@
                         <input type="text" class="form-control" id="donation" placeholder="Masukkan jumlah donasi" value="Rp 15,750,000">
                     </div>
                     <div class="text-center">
-                        <button type="button" class="btn btn-success btn-lg rounded-pill py-3 px-5">Update Profile</button>
+                        <button type="submit" class="btn btn-success btn-lg rounded-pill py-3 px-5">Update Profile</button>
                     </div>
                 </form>
             </div>

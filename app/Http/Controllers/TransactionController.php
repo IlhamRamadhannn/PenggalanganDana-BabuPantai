@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Donations;
 use Illuminate\Http\Request;
 
 class TransactionController extends Controller
@@ -12,6 +13,7 @@ class TransactionController extends Controller
     public function index()
     {
         //
+        // dd();
         return view('transaksi');
     }
 
@@ -21,6 +23,7 @@ class TransactionController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**
@@ -29,6 +32,9 @@ class TransactionController extends Controller
     public function store(Request $request)
     {
         //
+        Donations::create($request->input());
+        return redirect()->route('donate')->with('success', 'Donation successfull');
+        
     }
 
     /**

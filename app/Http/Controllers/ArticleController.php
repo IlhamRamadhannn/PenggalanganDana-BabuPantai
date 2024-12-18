@@ -11,7 +11,7 @@ class ArticleController extends Controller
     public function index(){
         $articles = Articles::paginate(10);
 
-        dd($articles);
+        // dd($articles);
         return view('articles',  compact('articles'));
     }
 }

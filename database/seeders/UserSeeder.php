@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Users;
+use App\Models\User;
 use Faker\Factory as Faker;
 
 class UserSeeder extends Seeder
@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
         $faker = Faker::create();
         $gender = ['Laki-laki', 'Perempuan'];
         foreach (range(1, 10) as $index) { // Membuat 10 user dummy
-            Users::create([
+            User::create([
                 'name' => $faker->name,
                 'gender'=> $faker->randomElement($gender),
                 'email' => $faker->unique()->safeEmail,
