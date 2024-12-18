@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Donations;
 
 class DonateController extends Controller
 {
@@ -12,14 +11,8 @@ class DonateController extends Controller
      */
     public function index()
     {
-        $totalDonations = Donations::sum('amount');
-
-        $donations = Donations::with('user')  
-            ->orderBy('amount', 'desc') 
-            ->take(10)
-            ->get();
-        
-        return view('donate', compact('donations', 'totalDonations'));
+        //
+        return view('donate');
     }
 
     /**

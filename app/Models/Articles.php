@@ -10,10 +10,11 @@ class Articles extends Model
 {
     use HasFactory;
 
-    protected $table = 'articles';
-    protected $guard = [];
+    protected $table = 'article';
+    protected $guarded = [];
 
-    public function comments(){
-        $this->hasMany(Comments::class);
+    public function comments()
+    {
+        return $this->hasMany(Comments::class);
     }
-}
+}    
