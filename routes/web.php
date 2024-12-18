@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers;
+use App\Http\Controllers\ArticleController;
 
 // Route::get('/', function () {
 //     echo "123";
@@ -14,9 +15,12 @@ Route::get('/homepage', [Controllers\HomepageController::class, 'index'])->name(
 Route::get('/about', [Controllers\AboutController::class, 'index']);
 Route::get('/articles', [Controllers\ArticleController::class, 'index']);
 Route::get('/donate', [Controllers\DonateController::class, 'index'])->name('donate');
-Route::get('/article_detail/{id}', [Controllers\ArticledetailController::class, 'index'])->name('article_detail');
 
 Route::resource('profile', Controllers\ProfileController::class);
+
+Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
+
+
 
 // Route::post('/transaksi', [Controllers\TransactionController::class, 'store'])->name('transaksi.store');
 
