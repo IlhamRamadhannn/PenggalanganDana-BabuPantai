@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->decimal('amount', 15, 2);
-            $table->string('payment_method');
+            $table->enum('payment_method', ['Bank Transfer', 'Credit Card', 'E-Wallet']); 
             // $table->string('status')->default('pending'); 
             // pending, completed, failed
             $table->timestamps();

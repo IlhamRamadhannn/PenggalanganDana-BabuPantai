@@ -9,10 +9,11 @@ class Donations extends Model
 {
     use HasFactory;
 
-    protected $table= 'donations';
+    protected $table = 'donations'; 
     protected $guarded = [];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }
