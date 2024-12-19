@@ -6,21 +6,26 @@
     <title>Document</title>
     @include('custom.bootstrap5')
 </head>
-<style>
-    .background {
+<style >
+        p{
+            
+        }
+        *{
+            
+        }
+
+        body {
         background-image: url('/images/seaextend.png');
-        /* background-image:rgb(245, 245, 245); */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 </style>
 <body>
-    <div class="background">
-        @include('layout.header')
+    @include ('layout.header')
 
-        @yield('content')
+    @yield('content')
 
-        @include('layout.footer')
-    </div>
+    @include ('layout.footer')
 </body>
+</html>

@@ -10,7 +10,7 @@ class Articles extends Model
 {
     use HasFactory;
 
-    protected $table = 'article';
+    protected $table = 'articles';
     protected $guarded = [];
 
     public function comments()

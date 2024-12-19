@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
                 'phone_number' => $faker->phoneNumber,
                 'points' => $faker->randomNumber(3),
                 'password' => Hash::make('password'), // Password default
-                'total_donation' => $faker->randomFloat(2, 100000, 1000000), // Donasi total acak antara 100rb - 1jt
+                // 'total_donation' => $faker->randomFloat(2, 100000, 1000000), // Donasi total acak antara 100rb - 1jt
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
