@@ -8,7 +8,7 @@
                         <a class="nav-link" style="font-weight: bold;" href="{{route('homepage')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" style="font-weight: bold;" href="{{ route('about') }}#about-us">About Us</a>
+                    <a class="nav-link" style="font-weight: bold;" href="{{ route('homepage') }}#about-us">About Us</a>
 
                     </li>
                     <li class="nav-item">
