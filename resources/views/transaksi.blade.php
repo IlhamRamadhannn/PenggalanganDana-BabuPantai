@@ -11,10 +11,10 @@
 
             <form method="post" action="{{route('transaksi.store')}}" style="background-color: rgba(0, 0, 0, 0.4); padding: 30px; border-radius: 10px;margin-bottom: 20px;">
                 @csrf
-
+                
                 <div class="mb-4">
-                    <label class="text-white fw-bold" style="font-size: 1.2rem;" for="Donation_amount">Jumlah Donasi (Rp):</label>
-                    <input type="text" id="jumlah_donasi" class="form-control" placeholder="Masukkan jumlah uang" onkeyup="formatRupiah(this)">
+                    <label class="text-white fw-bold" style="font-size: 1.2rem;" for="amount">Jumlah Donasi (Rp):</label>
+                    <input type="number" name="amount" id="amount" class="form-control" placeholder="Masukkan jumlah uang" onkeyup="formatRupiah(this)" required>
                 </div>
 
                 {{-- <div class="mb-4">
@@ -26,7 +26,7 @@
                     <label class="text-white fw-bold" style="font-size: 1.2rem;">Metode Pembayaran:</label>
                     <div class="d-flex flex-wrap gap-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="metode_pembayaran" value="OVO" id="ovo">
+                            <input class="form-check-input" type="radio" name="metode_pembayaran" value="ovo" id="ovo" >
                             <label class="form-check-label text-white fw-bold" for="ovo">
                                 OVO
                             </label>
@@ -38,7 +38,7 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="metode_pembayaran" value="ShopeePay" id="shopeepay">
+                            <input class="form-check-input" type="radio" name="metode_pembayaran" value="shopeePay" id="shopeepay">
                             <label class="form-check-label text-white fw-bold" for="shopeepay">
                                 ShopeePay
                             </label>
@@ -57,18 +57,22 @@
                     {{-- <a href="#" class="btn btn-success btn-lg rounded-pill py-3 px-5">Kirim Donasi</a> --}}
                 
             </form>
-
+            {{-- @if (@@error('record')
+                
+            @enderror)
+                
+            @endif --}}
           
 
 
         </div>
     </div>
 </div>
-<script>
+{{-- <script>
 function formatRupiah(element) {
     let value = element.value.replace(/\./g, ''); 
     value = value.replace(/\D/g, ''); 
     element.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, "."); 
 }
-</script>
+</script> --}}
 @endsection

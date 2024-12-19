@@ -8,11 +8,11 @@
                         <a class="nav-link" style="font-weight: bold;" href="{{route('homepage')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" style="font-weight: bold;" href="{{ route('homepage') }}#about-us">About Us</a>
+                    <a class="nav-link" style="font-weight: bold;" href="{{ route('about') }}#about-us">About Us</a>
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight: bold;" href="/articles">Articles</a>
+                        <a class="nav-link" style="font-weight: bold;" href="{{route('articles')}}">Articles</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" style="font-weight: bold;" href="#" role="button" data-bs-toggle="dropdown" >

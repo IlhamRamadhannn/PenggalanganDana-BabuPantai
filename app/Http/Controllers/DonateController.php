@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Donations;
+use Illuminate\Http\Request;
+
 
 class DonateController extends Controller
 {
@@ -20,6 +21,10 @@ class DonateController extends Controller
             ->get();
         
         return view('donate', compact('donations', 'totalDonations'));
+        //
+        // $user = User::with('donations')->get();
+        // // dd($user);
+        // return view('donate', compact('user'));
     }
 
     /**

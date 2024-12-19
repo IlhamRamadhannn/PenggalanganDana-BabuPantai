@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Users;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use App\Models\User;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 use function Laravel\Prompts\table;
 
@@ -16,10 +20,19 @@ class ProfileController extends Controller
     public function index()
     {
         //
-        $user = DB::table('users')->where('id', '1')->get();
+        // $user = DB::table('users')->where('id', '1')->get();
+        $user = Auth::user();
+        
 
         // dd($user);
         return view('profile', compact('user'));
+    }
+
+    public function editpage(){
+        $user = Auth::user();
+        $profile= $user->id;
+        // dd($user);
+        return view('profile_update', compact('user', 'profile') );
     }
 
     /**
@@ -29,7 +42,7 @@ class ProfileController extends Controller
     {
         //
 
-        return view('profile_update');
+        
     }
 
     /**
@@ -59,9 +72,51 @@ class ProfileController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, int $profile)
     {
         //
+        // dd($profile);
+        $user = Auth::user();
+        // $userdb = DB::table('users')->where('id', $profile)->first();
+        // $req = $request->all();
+
+        // dd($req);
+        // $request = Validator::make($request->all(),[
+        //     'username'=>['required', 'max:255'],
+        //     'gender' => ['required', 'in:male,female'],
+        //     'phone'=> ['required', 'max:255'],
+            
+
+        // ] 
+        // );
+
+        // if($validator->fails() or !$userdb){
+        //     return redirect()->route('profile.editpage')
+        //                     ->withErrors($validator);
+        // }
+        // dd($request->);
+        
+
+        $user->name = $request->input('username');
+        $user->gender = $request->input('gender');
+        $user->phone_number = $request->input('phone');
+        
+        // $userdb->name = $request->input('username');
+        // $userdb->gender = $request->input('gender');
+        // $userdb->phone_number = $request->input('phone');
+        // $userdb->save();
+
+        DB::table('users')->where('id', $profile)->update([
+            'name' => $request->username,
+            'gender' => $request->gender,
+            'phone_number' => $request->phone,
+        ]);
+
+        // dd($userdb->name);
+
+        return redirect()->route('profile.index')->with('success', 'profile sucessfully updated');
+
+
     }
 
     /**

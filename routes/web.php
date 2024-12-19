@@ -12,11 +12,12 @@ use App\Http\Controllers\ArticleController;
 // });
 Route::get('/', [Controllers\HomeController::class, 'index']);
 Route::get('/homepage', [Controllers\HomepageController::class, 'index'])->name('homepage');
-Route::get('/about', [Controllers\AboutController::class, 'index']);
-Route::get('/articles', [Controllers\ArticleController::class, 'index']);
+Route::get('/about', [Controllers\AboutController::class, 'index'])->name('about');
+Route::get('/articles', [Controllers\ArticleController::class, 'index'])->name('articles');
 Route::get('/donate', [Controllers\DonateController::class, 'index'])->name('donate');
 
 Route::resource('profile', Controllers\ProfileController::class);
+Route::get('/editpage', [Controllers\ProfileController::class, 'editpage'])->name('profile.editpage');
 
 Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
 
@@ -26,13 +27,13 @@ Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles
 
 Route::resource('transaksi', Controllers\TransactionController::class);
 
-Auth::routes();
+// // Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+// // Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 

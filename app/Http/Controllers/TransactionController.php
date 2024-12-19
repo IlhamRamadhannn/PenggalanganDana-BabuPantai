@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Donations;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class TransactionController extends Controller
 {
@@ -14,7 +16,8 @@ class TransactionController extends Controller
     {
         //
         // dd();
-        return view('transaksi');
+        $user = Auth::user();
+        return view('transaksi', compact('user'));
     }
 
     /**
@@ -32,7 +35,28 @@ class TransactionController extends Controller
     public function store(Request $request)
     {
         //
-        Donations::create($request->input());
+        $user=Auth::user();
+        
+        $validator = Validator::make($request->all(), [
+            'amount'=>['required', 'integer', 'min:10000'],
+            'metode_pembayaran'=>['required', 'in:ovo,gopay,shopeepay,dana']
+        ]);
+
+        // if($validator->fails()){
+        //     return redirect()->route('transaksi.index')->withErrors($validator);
+        // }
+
+    //    dd($request);
+        if(Donations::where('user_id', $user->id)->exists()){
+            $donation = Donations::where('user_id', $user->id)->first();
+            $donation->amount = $donation->amount + $request->amount;   
+        }
+        Donations::create([
+            'user_id' => $user->id,
+            'amount' => $request->amount,
+            'payment_method'=>$request->metode_pembayaran,
+        ]);
+        
         return redirect()->route('donate')->with('success', 'Donation successfull');
         
     }

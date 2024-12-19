@@ -34,8 +34,9 @@ class DonationsSeeder extends Seeder
                     'user_id' => $user->id,
                     'amount' => $faker->randomFloat(2, 50000, 500000), // Donasi antara 50rb - 500rb
                     'payment_method' => $faker->randomElement(['Bank Transfer', 'Credit Card', 'E-Wallet']),
-                    'created_at' => now(),
-                    'updated_at' => now(),
+                    // 'status' => $faker->randomElement(['completed', 'pending', 'failed']),
+                    // 'created_at' => now(),
+                    // 'updated_at' => now(),
                 ]);
             }
         }

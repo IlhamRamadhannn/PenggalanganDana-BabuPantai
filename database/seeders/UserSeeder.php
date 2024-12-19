@@ -23,12 +23,12 @@ class UserSeeder extends Seeder
                 'name' => $faker->name,
                 'gender'=> $faker->randomElement($gender),
                 'email' => $faker->unique()->safeEmail,
-                'phone_number' => $faker->phoneNumber,
+                'phone_number' => '0'.$faker->numberBetween(1000000000, 9999999999),
                 'points' => $faker->randomNumber(3),
                 'password' => Hash::make('password'), // Password default
                 // 'total_donation' => $faker->randomFloat(2, 100000, 1000000), // Donasi total acak antara 100rb - 1jt
-                'created_at' => now(),
-                'updated_at' => now(),
+                // 'created_at' => now(),
+                // 'updated_at' => now(),
             ]);
         }
     }

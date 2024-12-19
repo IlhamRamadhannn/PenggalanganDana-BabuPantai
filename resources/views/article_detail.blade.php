@@ -4,10 +4,10 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
-            <!-- <h1 class="fw-bold text-center" style="color: rgb(0, 4, 255); margin-top: 80px;">Perlindungan Hukum Atas Lingkungan Laut dan Pesisir Terhadap Kebijakan Pengelolaan Teluk Ambon Dalam Rangka Penyiapan Konsep Water Front City</h1>
-            <p class="fw-bold text-center" style="color: rgb(0, 4, 255);">Oleh J.S.F. Peilouw | Fakultas Hukum Universitas Pattimura</p> -->
-            {{$article->title}}
-            <br> {{$article->category}}
+             <h1 class="fw-bold text-center" style="color: rgb(28, 29, 32); margin-top: 80px;">{{$article->title}}</h1>
+            <p class="fw-bold text-center" style="color: rgb(71, 80, 43);">{{$article->category}}</p> 
+            
+            <br> 
         </div>
     </div>
 

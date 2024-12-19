@@ -17,19 +17,19 @@
                 <div class="mb-4">
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
                         <span class="fw-bold">Nama Donatur:</span>
-                        <span class="fw-bold">John Doe</span>
+                        <span class="fw-bold">{{$user->name}}</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
                         <span class="fw-bold">Jenis Kelamin:</span>
-                        <span class="fw-bold">Laki-laki</span>
+                        <span class="fw-bold">{{$user->gender}}</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
                         <span class="fw-bold">Nomor Telepon:</span>
-                        <span class="fw-bold">088273662872</span>
+                        <span class="fw-bold">{{$user->phone_number}}</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
                         <span class="fw-bold">Email:</span>
-                        <span class="fw-bold">DoeJohn77@gmail.com</span>
+                        <span class="fw-bold">{{$user->email}}</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
                         <span class="fw-bold">Jumlah Donasi:</span>
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="{{route('profile.create')}}" class="btn btn-success btn-lg rounded-pill py-3 px-5">Edit Profile</a>
+                    <a href="{{route('profile.editpage')}}" class="btn btn-success btn-lg rounded-pill py-3 px-5">Edit Profile</a>
                 </div>
                 {{-- <div class="text-center">
                     <a href="{{route('logout')}}" class="btn btn-success btn-lg rounded-pill py-3 px-5" style="margin-top: 10px">logout</a>
