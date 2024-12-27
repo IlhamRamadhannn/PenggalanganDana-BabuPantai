@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 use App\Http\Controllers;
 use App\Http\Controllers\ArticleController;
@@ -20,6 +22,14 @@ Route::resource('profile', Controllers\ProfileController::class);
 Route::get('/editpage', [Controllers\ProfileController::class, 'editpage'])->name('profile.editpage');
 
 Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
+
+Route::get('/change-language/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'id'])) {
+        session(['locale' => $locale]);
+        app()->setLocale($locale);
+    }
+    return redirect()->back();
+})->name('change.language');
 
 
 
