@@ -7,21 +7,21 @@
 
 <div class="container mt-3">
     <div class="text-center mb-5 font-weight-bold">
-        <h1 class="display-4" style="color: white;">Support Our Cause</h1>
+        <h1 class="display-4" style="color: white;">{{ __('donate.title') }}</h1>
 
-        <a href="{{ route('transaksi.store') }}" class="btn btn-primary btn-lg mt-4">Donate Now</a>
+        <a href="{{ route('transaksi.store') }}" class="btn btn-primary btn-lg mt-4">{{ __('donate.donatebutton') }}</a>
     </div>
 
     <div class="text-center mb-5" style="color: white;">
         <h1 style="font-size: 1.5rem; color: #007bff; display: inline-block; background-color: white; padding: 20px 30px; border-radius: 8px;">
-            TOTAL DONATIONS :<br>
+        {{ __('donate.total') }} :<br>
             <span style="font-size: 3.5rem; color: #007bff;">
                 Rp {{ number_format($totalDonations, 0, ',', '.') }}
             </span>
         </h1>
     </div>
 
-    <h2 class="text-center mb-4" style="color: white; font-size: 3rem;">Top Donators</h2>
+    <h2 class="text-center mb-4" style="color: white; font-size: 3rem;">{{ __('donate.top') }}</h2>
 
     <div class="container">
         
@@ -30,9 +30,9 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Donor</th>
-                        <th>Amount Donated</th>
-                        <th>Payment Method</th>
+                        <th>{{ __('donate.donor') }}</th>
+                        <th>{{ __('donate.amt') }}</th>
+                        <th>{{ __('donate.pay') }}</th>
                         <!-- <th>Status</th> -->
                     </tr>
                 </thead>

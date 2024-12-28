@@ -1,2 +1,2 @@
 <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.bundle.min.js')}}">
+<script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>

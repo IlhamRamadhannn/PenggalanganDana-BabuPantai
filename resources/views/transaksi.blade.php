@@ -45,10 +45,10 @@
                     {{ __('transaksi.submit_donation') }}
                 </button>
             </form>
-            <div class="d-flex gap-2">
+            <!-- <div class="d-flex gap-2">
                  <a href="{{ route('change.language', 'en') }}" class="btn btn-secondary">English</a>
                  <a href="{{ route('change.language', 'id') }}" class="btn btn-secondary">Indonesia</a>
-             </div>
+             </div> -->
         </div>
     </div>
 </div>

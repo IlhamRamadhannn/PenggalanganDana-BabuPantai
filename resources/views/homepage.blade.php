@@ -5,9 +5,9 @@
     <img src="{{ asset('images/sea.png') }}" class="img-fluid" alt="" style="filter:brightness(75%); width: 100%;">
     <div class="position-absolute top-50 start-50 translate-middle text-center">
         <h5 class="text-white fw-bold" style="font-size: 500%; text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);">
-            LIFE BELOW THE WATER
+        {{ __('home.title') }}
         </h5>
-        <a type="button" href="{{ route('homepage') }}#act" class="btn btn-light" style="font-weight: bold; padding: 12px; margin-top:40px">Take Action ></a>
+        <a type="button" href="{{ route('homepage') }}#act" class="btn btn-light" style="font-weight: bold; padding: 12px; margin-top:40px">{{ __('home.action_button') }}</a>
     </div>
 </div>
 
@@ -25,10 +25,10 @@
                             <div class="rounded-circle mx-auto" style="width:150px; height:150px; background:url({{ asset('images/kurakura.png') }}) center no-repeat ; background-size :cover;" ></div>
                         </div> -->
                         <div class="card-body">
-                            <h4 class="fw-bold mb-0" style="color:rgb(0, 90, 192);">WHO WE ARE</h4>
-                            <small class="text-muted">&horbar; is the largest international advocacy organization focused solely on ocean conservation. Oceana’s mission is to protect and restore our oceans.</small>
+                            <h4 class="fw-bold mb-0" style="color:rgb(0, 90, 192);">{{ __('home.card1') }}</h4>
+                            <small class="text-muted">&horbar; {{ __('home.carddetail') }}</small>
                             <p class="text-italic fw-light my-2">
-                                <a type="button" href="#" class="btn btn-light" style=" color:rgb(0, 90, 192); font-weight: bold; padding: 12px; margin-top:40px ">Get to Know Babu Pantai</a>
+                                <a type="button" href="#" class="btn btn-light" style=" color:rgb(0, 90, 192); font-weight: bold; padding: 12px; margin-top:40px ">{{ __('home.card1button') }}</a>
                             </p>
                         </div>
                     </div>
@@ -42,10 +42,10 @@
                             <div class="rounded-circle mx-auto" style="width:150px; height:150px; background:url({{ asset('images/kurakura.png') }}) center no-repeat ; background-size :cover;" ></div>
                         </div> -->
                         <div class="card-body">
-                            <h4 class="fw-bold mb-0" style="color:rgb(0, 90, 192);">THE IMPACT</h4>
-                            <small class="text-muted">&horbar; is the largest international advocacy organization focused solely on ocean conservation. Oceana’s mission is to protect and restore our oceans.</small>
+                            <h4 class="fw-bold mb-0" style="color:rgb(0, 90, 192);">{{ __('home.card2') }}</h4>
+                            <small class="text-muted">&horbar; {{ __('home.carddetail') }}</small>
                             <p class="text-italic fw-light my-2">
-                                <a type="button" href="#" class="btn btn-light" style=" color:rgb(0, 90, 192); font-weight: bold; padding: 12px; margin-top:40px ">See the changes we made</a>
+                                <a type="button" href="#" class="btn btn-light" style=" color:rgb(0, 90, 192); font-weight: bold; padding: 12px; margin-top:40px ">{{ __('home.card2button') }}</a>
                             </p>
                         </div>
                     </div>
@@ -57,10 +57,10 @@
                             <div class="rounded-circle mx-auto" style="width:150px; height:150px; background:url({{ asset('images/kurakura.png') }}) center no-repeat ; background-size :cover;" ></div>
                         </div> -->
                         <div class="card-body">
-                            <h4 class="fw-bold mb-0" style="color:rgb(0, 90, 192);">OUR ACTION</h4>
-                            <small class="text-muted">&horbar; is the largest international advocacy organization focused solely on ocean conservation. Oceana’s mission is to protect and restore our oceans.</small>
+                            <h4 class="fw-bold mb-0" style="color:rgb(0, 90, 192);">{{ __('home.card3') }}</h4>
+                            <small class="text-muted">&horbar; {{ __('home.carddetail') }}</small>
                             <p class="text-italic fw-light my-2">
-                                <a type="button" href="#" class="btn btn-light" style=" color:rgb(0, 90, 192); font-weight: bold; padding: 12px; margin-top:40px ">Learn More</a>
+                                <a type="button" href="#" class="btn btn-light" style=" color:rgb(0, 90, 192); font-weight: bold; padding: 12px; margin-top:40px ">{{ __('home.card3button') }}</a>
                             </p>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
         <div class="container my-5 py-5">
             <div class="row align-items-center text-center text-md-start">
              <div class="col-md-6">
-            <h2 class="heading" style="color:white; font-weight: bold;">OCEAN IS IN DANGER</h2>
+            <h2 class="heading" style="color:white; font-weight: bold;">{{ __('home.oceandanger') }}</h2>
             <p class="lead" style="color:white;">
                 Babu Pantai Helps in publishing and graphic design, 
                 Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document 
@@ -87,7 +87,7 @@
     <div class="container my-5 py-5">
         <div class="row align-items-center text-center text-md-start">
             <div class="col-md-6 order-md-2"> <!-- Tulisan di kanan -->
-                <h2 class="heading" style="color:white; font-weight: bold;">About Us</h2>
+                <h2 class="heading" style="color:white; font-weight: bold;">{{ __('home.aboutus') }}</h2>
                 <p class="lead" style="color:white;">
                     Kami adalah Babu Pantai, sebuah gerakan yang didedikasikan untuk melindungi keindahan laut Indonesia. Berawal dari keprihatinan terhadap meningkatnya pencemaran sampah di pantai dan laut, kami hadir sebagai bagian dari solusi.
 
@@ -139,7 +139,7 @@
             <div class="row mt-3">
             <div class="col-4"></div>
         <div class="col-2 text-center">
-            <a type="button" href="/donate" class="btn btn-success btn-lg rounded-pill py-3 px-5 mt-4 l-2">Donate</a>
+            <a type="button" href="/donate" class="btn btn-success btn-lg rounded-pill py-3 px-5 mt-4 l-2">{{ __('home.donate_button') }}</a>
         </div>
             </div>
         </div> 

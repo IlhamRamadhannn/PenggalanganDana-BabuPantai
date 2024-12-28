@@ -5,40 +5,39 @@
             <div class="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight: bold;" href="{{route('homepage')}}">Home</a>
+                        <a class="nav-link" style="font-weight: bold;" href="{{route('homepage')}}">{{ __('header.home') }}</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" style="font-weight: bold;" href="{{ route('homepage') }}#about-us">About Us</a>
+                    <a class="nav-link" style="font-weight: bold;" href="{{ route('homepage') }}#about-us">{{ __('header.aboutus') }}</a>
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight: bold;" href="{{route('articles')}}">Articles</a>
+                        <a class="nav-link" style="font-weight: bold;" href="{{route('articles')}}">{{ __('header.articles') }}</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" style="font-weight: bold;" href="#" role="button" data-bs-toggle="dropdown" >
-                            Articles
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" style="font-weight: bold;" href="#">Services Insite</a></li>
-                            <li><a class="dropdown-item" style="font-weight: bold;" href="#">Services Mine</a></li>
-                        </ul>
-                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight: bold;" href="/donate">Donate</a>
+                        <a class="nav-link" style="font-weight: bold;" href="/donate">{{ __('header.donate') }}</a>
                     </li>
                     
                     @guest
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight: bold;" href="{{route('login')}}">Login</a>
+                        <a class="nav-link" style="font-weight: bold;" href="{{route('login')}}">{{ __('header.login') }}</a>
                     </li>    
 
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight: bold;" href="/profile">Profile</a>
+                        <a class="nav-link" style="font-weight: bold;" href="/profile">{{ __('header.profiles') }}</a>
                     </li>
                     @endguest
 
-                    
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-weight: bold;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ __('header.language') }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('change.language', 'id') }}">{{ __('header.id') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('change.language', 'en') }}">{{ __('header.en') }}</a></li>
+                    </ul>
+                     </li>
                 </ul>
             </div>
         </div>
