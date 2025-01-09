@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Users;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use App\Models\Donations;
+use Illuminate\Auth\Events\Validated;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 
+use function Laravel\Prompts\select;
 use function Laravel\Prompts\table;
 
 class ProfileController extends Controller
@@ -21,10 +24,18 @@ class ProfileController extends Controller
     {
         //
         // $user = DB::table('users')->where('id', '1')->get();
-        $user = Auth::user();
+        $id = Auth::user()->id;
+        $user = User::withSum('donations as total_donate', 'amount')
+                    ->where('id', $id)
+                    ->first();
+        // $user = DB::table('users')
+                    
+        //             ->where('id', $id)
+        //             ->get();
         
 
         // dd($user);
+
         return view('profile', compact('user'));
     }
 
@@ -76,30 +87,28 @@ class ProfileController extends Controller
     {
         //
         // dd($profile);
-        $user = Auth::user();
+        // $user = Auth::user();
         // $userdb = DB::table('users')->where('id', $profile)->first();
         // $req = $request->all();
 
-        // dd($req);
-        // $request = Validator::make($request->all(),[
-        //     'username'=>['required', 'max:255'],
-        //     'gender' => ['required', 'in:male,female'],
-        //     'phone'=> ['required', 'max:255'],
-            
+        // dd($request);
+        $validator = $request->validate([
+            'username'=>['required', 'max:255'],
+            'gender' => ['required', 'in:male,female'],
+            'phone'=> ['required', 'min:11','max:11', 'starts_with:0' ],
+        
+        ]);
+        // dd($validator);
 
-        // ] 
-        // );
-
-        // if($validator->fails() or !$userdb){
+        // if($validator->fails() or !$user){
         //     return redirect()->route('profile.editpage')
         //                     ->withErrors($validator);
         // }
         // dd($request->);
         
-
-        $user->name = $request->input('username');
-        $user->gender = $request->input('gender');
-        $user->phone_number = $request->input('phone');
+        // $user->name = $request->input('username');
+        // $user->gender = $request->input('gender');
+        // $user->phone_number = $request->input('phone');
         
         // $userdb->name = $request->input('username');
         // $userdb->gender = $request->input('gender');

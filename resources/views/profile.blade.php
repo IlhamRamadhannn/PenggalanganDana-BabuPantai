@@ -33,7 +33,7 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-center text-white mb-3" style="font-size: 2rem;">
                         <span class="fw-bold">Jumlah Donasi:</span>
-                        <span class="fw-bold">Rp 1,000,000</span>
+                        <span class="fw-bold">Rp {{$user->total_donate}}</span>
                     </div>
                 </div>
 

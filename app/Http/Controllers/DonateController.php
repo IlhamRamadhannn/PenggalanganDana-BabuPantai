@@ -15,11 +15,13 @@ class DonateController extends Controller
     {
         $totalDonations = Donations::sum('amount');
 
-        $donations = Donations::with('user')  
-            ->orderBy('amount', 'desc') 
+        $donations = Donations::with('user')
+            ->selectRaw('sum(amount) as total_amount, user_id')
+            ->groupby('user_id') 
+            ->orderBy('total_amount', 'desc') 
             ->take(10)
             ->get();
-        
+        // dd($donations);
         return view('donate', compact('donations', 'totalDonations'));
         //
         // $user = User::with('donations')->get();

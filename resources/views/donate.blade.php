@@ -32,7 +32,7 @@
                         <th>#</th>
                         <th>{{ __('donate.donor') }}</th>
                         <th>{{ __('donate.amt') }}</th>
-                        <th>{{ __('donate.pay') }}</th>
+                        
                         <!-- <th>Status</th> -->
                     </tr>
                 </thead>
@@ -41,8 +41,8 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $donation->user->name }}</td>
-                            <td>Rp {{ number_format($donation->amount, 0, ',', '.') }}</td> 
-                            <td>{{ $donation->payment_method }}</td>
+                            <td>Rp {{ number_format($donation->total_amount, 0, ',', '.') }}</td> 
+                           
                             <!-- <td>{{ ucfirst($donation->status) }}</td> Capitalize the status -->
                         </tr>
                     @endforeach
