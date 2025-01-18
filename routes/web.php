@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Session;
 
 use App\Http\Controllers;
 use App\Http\Controllers\ArticleController;
-
+use App\Http\Controllers\CommentController;
 
 Route::get('/', [Controllers\HomepageController::class, 'index'])->name('homepage');
 
@@ -31,6 +31,18 @@ Route::get('/change-language/{locale}', function ($locale) {
 Auth::routes();
 
 Route::resource('transaksi', Controllers\TransactionController::class);
+
+Route::post('/articles/{id}/comments', [CommentController::class, 'store'])->name('comments.store');
+
+Route::middleware('auth')->group(function () {
+    
+    Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
+    Route::put('/comments/{comment}', [CommentController::class, 'update'])->name('comments.update');
+    
+    Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
+});
+
+Route::post('/toggle-comments/{id}', [ArticleController::class, 'toggleComments'])->name('toggle.comments');
 
 
 

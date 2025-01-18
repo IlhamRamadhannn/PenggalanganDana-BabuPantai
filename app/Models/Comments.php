@@ -12,12 +12,13 @@ class Comments extends Model
     protected $table = 'comments';
     protected $guarded = [];
 
-    public function user(){
-        $this->belongsTo(User::class);
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
-    public function article(){
-
-        $this->belongsTo(Articles::class);
+    public function article()
+    {
+        return $this->belongsTo(Articles::class, 'articles_id'); // Specify the foreign key if it's not the default 'article_id'
     }
 }
