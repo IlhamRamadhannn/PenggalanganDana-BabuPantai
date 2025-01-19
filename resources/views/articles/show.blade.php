@@ -6,9 +6,11 @@
         <div class="container my-15 pt-5 pb-5">
             <div class="row">
                 <div class="col-md-12">
+
                     <h1 class="fw-bold text-center" style="color: rgb(255, 255, 255); margin-top: 80px;">{{$article->title}}</h1>
                     <p class="fw-bold text-center" style="color: rgb(255, 255, 255);">Oleh: {{$article->author}}</p>
                     <br>
+
                     <p class="fw-bold text-center" style="color: rgb(255, 255, 255);">Kategori: {{$article->category}}</p>
                 </div>
             </div>
@@ -20,7 +22,7 @@
             </div>
 
             <!-- Comments Section -->
-            <div class="row mt-5">
+            {{-- <div class="row mt-5">
                 <div class="col-md-9 mx-auto">
                 <!-- Comments Header with Toggle Button -->
                     <div class="d-flex justify-content-between align-items-center">
@@ -57,9 +59,9 @@
                                 Login
                             </a>
                         </div>
-                    @endif
+                    @endif --}}
 
-                    <!-- Display Comments -->
+                    {{-- <!-- Display Comments -->
                     <div class="comments-list mt-4">
                         @foreach($article->comments as $comment)
                             <div class="comment-box mb-4 p-3 rounded border" style="background-color: #f9f9f9; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -87,6 +89,8 @@
                                                     </button>
                                                 </form>
                                             </div>
+                                        @else
+                                            no comment
                                         @endif
                                     @endauth
                                 </div>
@@ -94,9 +98,24 @@
                                 <p>{{ $comment->comment }}</p>
                             </div>
                         @endforeach
-                    </div>
-                </div>
+                    </div> --}}
+                {{-- </div> --}}
+            {{-- </div>
+            <br>
+            <div class="row">
+                <h2>comment
+                    </h2>
             </div>
+            <div class="row">
+                <div class="col-md-9"> 
+                    <form action="{{route('')}}" method="POST">
+                        @csrf
+                        <textarea name="inp_comment" id="inp_comment" cols="70" rows="2" placeholder="Type your comment"></textarea>
+                        <br>
+                        <input style="margin-top: 20px" class="btn btn-success" type="submit">
+                    </form>
+                </div>
+            </div> --}}
         </div>
     </div>
 </div>

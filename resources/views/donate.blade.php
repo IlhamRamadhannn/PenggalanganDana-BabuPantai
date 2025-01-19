@@ -7,21 +7,21 @@
 
 <div class="container mt-3">
     <div class="text-center mb-5 font-weight-bold">
-        <h1 class="display-4" style="color: white;">Support Our Cause</h1>
+        <h1 class="display-4" style="color: white;">{{ __('donate.title') }}</h1>
 
-        <a href="{{ route('transaksi.store') }}" class="btn btn-primary btn-lg mt-4">Donate Now</a>
+        <a href="{{ route('transaksi.store') }}" class="btn btn-primary btn-lg mt-4">{{ __('donate.donatebutton') }}</a>
     </div>
 
     <div class="text-center mb-5">
         <div style="display: inline-block; background-color: #007bff; color: white; padding: 20px 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h2 style="font-size: 2rem; margin: 0; font-weight: bold;">TOTAL DONATIONS</h2>
+            <h2 style="font-size: 2rem; margin: 0; font-weight: bold;">{{ __('donate.total') }}</h2>
             <p style="font-size: 3rem; margin: 0; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
                 Rp {{ number_format($totalDonations, 0, ',', '.') }}
             </p>
         </div>
     </div>
 
-    <h2 class="text-center mb-4" style="color: white; font-size: 3rem;">Top Donators</h2>
+    <h2 class="text-center mb-4" style="color: white; font-size: 3rem;">{{ __('donate.top') }}</h2>
 
     <div class="container">
         <div style="backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.4); padding: 40px; border-radius: 10px;">
@@ -29,8 +29,8 @@
                 <thead>
                     <tr>
                         <th>Rank</th>
-                        <th>Donor</th>
-                        <th>Total Amount Donated</th>
+                        <th>{{ __('donate.donor') }}</th>
+                        <th>{{ __('donate.amt') }}</th>
                     </tr>
                 </thead>
                 <tbody>

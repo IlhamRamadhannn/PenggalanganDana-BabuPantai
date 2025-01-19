@@ -5,7 +5,7 @@ return [
     'donatebutton' => 'Donasi Sekarang',
     'total' => 'Donasi Terkumpul',
     'top' => 'Donatur Teratas',
-    'donor' => 'Donor',
+    'donor' => 'nama donatur',
     'amt' => 'Jumlah Donasi',
     'pay' => 'Metode Pembayaran',
 ];
