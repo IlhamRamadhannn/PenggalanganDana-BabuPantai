@@ -54,20 +54,4 @@ class ArticleController extends Controller
 
     }
 
-    public function postcomment(Request $request, int $id){
-        // $user = Auth::user();
-
-        // Comments::create([
-
-        // ]);
-
-    }
-
-    public function editcomment(Request $request, int $id){
-
-    }
-
-    public function deletecomment(int $id){
-
-    }
 }
