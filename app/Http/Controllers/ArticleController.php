@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Articles;
+use App\Models\Comments;
 use Illuminate\Http\Request;
-use App\Models\Articles; // Correct model name
-use App\Models\Comments; // Correct model name for comments
-use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -35,6 +34,23 @@ class ArticleController extends Controller
 
         // Redirect back to the article's show page
         return redirect()->route('articles.show', $id);
+
+    }
+
+    public function postcomment(Request $request, int $id){
+        // $user = Auth::user();
+
+        // Comments::create([
+
+        // ]);
+
+    }
+
+    public function editcomment(Request $request, int $id){
+
+    }
+
+    public function deletecomment(int $id){
 
     }
 
